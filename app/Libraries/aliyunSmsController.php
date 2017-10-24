@@ -9,11 +9,11 @@ namespace App\Libraries;
 class aliyunSmsController{
     public static function sendMsg($tel,$code,$product,$template_id)
     {
-        $iClientProfile = \DefaultProfile::getProfile("cn-hangzhou", "LTAIe5h5phaENvMO", "SAUIcCUxZbdHSpV6PFpQaHgM86UoTB");
+        $iClientProfile = \DefaultProfile::getProfile("cn-hangzhou", "", "");
         $client = new \DefaultAcsClient($iClientProfile);
         $request = new Sms\SingleSendSmsRequest();
 
-        $request->setSignName("微榕");/*签名名称*/
+        $request->setSignName("");/*签名名称*/
         //"SMS_31085014"
         $request->setTemplateCode($template_id);/*模板code*/
         $request->setRecNum($tel);/*目标手机号*/
@@ -37,11 +37,11 @@ class aliyunSmsController{
 
     public static function noticeMsg($tel,$template_id)
     {
-        $iClientProfile = \DefaultProfile::getProfile("cn-hangzhou", "LTAIe5h5phaENvMO", "SAUIcCUxZbdHSpV6PFpQaHgM86UoTB");
+        $iClientProfile = \DefaultProfile::getProfile("cn-hangzhou", "", "");
         $client = new \DefaultAcsClient($iClientProfile);
         $request = new Sms\SingleSendSmsRequest();
 
-        $request->setSignName("微榕");/*签名名称*/
+        $request->setSignName("");/*签名名称*/
         //"SMS_31085014"
         $request->setTemplateCode($template_id);/*模板code*/
         $request->setRecNum($tel);/*目标手机号*/
