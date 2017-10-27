@@ -23,7 +23,7 @@
 
 - 产品使用手册   https://hlcc.gitbooks.io/wr2_merchant_document/content/
 
-- 数据库文件   项目根目录 wr2.sql
+- 数据库mysql mongodb 数据库文件在项目根目录 wr2.sql
 
 - 本项目代码仅仅供初学laravel的人提供代码参考！！！
 
